@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Ebglyss® EMOTIONAL WELLBEING PROGRAMME</title>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Roboto font -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Tailwind config -->
+        <script>
+        tailwind.config = {
+            theme: {
+            extend: {
+                colors: {
+                    pagebg: '#B9C4DF',
+                    navbg: '#DBD8E4',
+                    cardbg: '#F3EBE6',
+                    infobg: '#E1E6F5',
+                    footerbg: '#B9C4DF',
+                },
+                backgroundImage: {
+                    // hero background
+                    'hero-svg': "url('./assets/bgs/HeroBg.svg')",
+                    // full-page background
+                    'page-svg': "url('./assets/bgs/background.svg')",
+                }
+            },
+            },
+        };
+        </script>
+
+        <style>
+
+            body {
+                font-family: 'Roboto', 'sans-serif';
+                font-weight: 300;
+                margin: 0;
+                padding: 0;
+            }
+            
+        </style>
+
+    </head>
+
+        <body class="flex flex-col min-h-screen bg-page-svg bg-no-repeat bg-cover">
+            <!-- Top bar -->
+            <div class="bg-navbg w-full">
+                <div>
+                    <p class="pl-20 pt-4 pb-4 text-sm">Ebglyss® Emotional Wellbeing Programme</p>
+                </div>
+            </div>
+
+            <!-- HERO -->
+            <section class="relative w-full overflow-hidden">
+                <!-- Hero background -->
+                <img src="./assets/bgs/HeroBg.svg" alt="Hero background gradient" class="w-full h-auto block">
+                <div class="absolute inset-0 justify-center text-center pt-4">
+                    <!-- disclaimer -->
+                    <div id="disclaimer" class="text-lg">
+                        <p>
+                            The Ebglyss®▼ Emotional Wellbeing Programme is delivered by Bionical Solutions and funded by Almirall Ltd in 
+                            collaboration with Evergreen Life.<br>▼ This medicine is subject to additional monitoring
+                        </p>
+                        <p class="pt-4">
+                            If you get any side effects talk to your doctor, pharmacist, or nurse. This includes any possible side effects not listed in the package leaflet.<br> 
+                            You can also report side effects via The Yellow Card Scheme Website:<a href="www.mhra.gov.uk/yellowcard" class="no-underline"> www.mhra.gov.uk/yellowcard</a>
+                            or search for MHRA Yellow Card in the <br>Google Play or Apple App Store. By reporting side effects you can help provide more information on the safety of this medicine.
+                        </p>
+                    </div>
+
+                    <!-- hero heading -->
+                    <h1 class="mt-14 mb-14 text-3xl md:text-7xl">
+                        Welcome to the Ebglyss® ▼ <br>Emotional Wellbeing Programme
+                    </h1>
+
+                    <!-- supporting text -->
+                    <p class="text-xl">
+                        At this stage you have probably tried various treatments for atopic dermatitis but are still hoping for relief from<br>
+                        this troublesome condition. You are to be commended for seeking treatment and, along with your doctor, taking<br> 
+                        an active part in it. We hope that you will soon find relief and the information presented here will be useful to you. 
+                    </p>
+                    <p class="text-xl mt-10">Stick with it, you and your doctor are doing great work together.</p>
+                    <!-- logo -->
+                    <img src="./assets/bionical-health.png" class="w-[220px] md:w-[437px] mx-auto mt-6" alt="Bionical Health logo.">
+                </div>
+            </section>
+            <!-- WELCOME -->
+            <section class="relative w-full overflow-hidden">
+                <div class="justify-center text-center">
+                    <!-- HORIZONTAL CARD -->
+                    <div class="flex bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-2xl mx-auto mb-10">
+                        <!-- Left image -->
+                        <img src="./assets/shutterstock_2029247285_edited.png" 
+                            alt="Hands holding smiley face" 
+                            class="w-60 h-60 object-cover rounded-l-2xl" />
+
+                        <!-- Right content -->
+                        <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">
+                            Welcome to Ebglyss® (lebrikizumab)<br>Emotional Wellbeing Programme
+                            </h2>
+                            <p class="mt-2 text-sm">
+                            Information to help you understand more about this programme and what to expect.
+                            </p>
+                        </div>
+
+                        <!-- Arrow button -->
+                        <div class="mt-auto flex justify-end p-4">
+                            <button class="btn-arrow w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                            </button>
+                        </div>
+                    </div>
+
+                    <h2 class="text-lg font-bold pb-4">Please read through the articles below which can help yuou to live well with atopic dermatitis.</h2>
+                    <p>
+                        The contents of this website are not intended to be medical advice. Please see your healthcare<br>
+                        professional with any specific questions about your condition and / or treatment.
+                    </p>
+
+                    <!-- condition and treatment -->
+                    <h2 class="text-4xl pt-8">Understanding your condition and treatment</h2>
+
+                    <!-- vertical cards -->
+                    <!-- VERTICAL CARD -->
+                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-xs mx-auto mb-10">
+                    <!-- Top image -->
+                    <img src="./assets/shutterstock_2029247285_edited.png" 
+                        alt="Hands holding smiley face" 
+                        class="w-full h-40 object-cover" />
+
+                    <!-- Bottom content -->
+                    <div class="flex flex-col flex-1 p-6 text-left relative">
+                        <h2 class="font-semibold text-lg">
+                        What is atopic dermatitis?
+                        </h2>
+                        <p class="mt-2 text-sm text-gray-700">
+                        This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                        </p>
+
+                        <!-- Arrow button in bottom right -->
+                        <div class="absolute bottom-4 right-4">
+                        <button class="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" 
+                                class="w-5 h-5 text-gray-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- INFO (Supporting your day to day) -->
+            <section class="bg-infobg bg-no-repeat bg-cover">
+
+            </section>
+            <!-- FOOTER -->
+            <footer class="bg-footerbg">
+            </footer>
+        </body>
+</html>
