@@ -1,169 +1,482 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Ebglyss® EMOTIONAL WELLBEING PROGRAMME</title>
-
-        <!-- Tailwind -->
-        <script src="https://cdn.tailwindcss.com"></script>
-
-        <!-- Roboto font -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-        <!-- Tailwind config -->
-        <script>
-        tailwind.config = {
-            theme: {
-            extend: {
-                colors: {
-                    pagebg: '#B9C4DF',
-                    navbg: '#DBD8E4',
-                    cardbg: '#F3EBE6',
-                    infobg: '#E1E6F5',
-                    footerbg: '#B9C4DF',
-                },
-                backgroundImage: {
-                    // hero background
-                    'hero-svg': "url('./assets/bgs/HeroBg.svg')",
-                    // full-page background
-                    'page-svg': "url('./assets/bgs/background.svg')",
-                }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebglyss&reg; EMOTIONAL WELLBEING PROGRAMME</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind config -->
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+                pagebg: '#B9C4DF',
+                navbg: '#DBD8E4',
+                cardbg: '#F3EBE6',
+                infobg: '#E1E6F5',
+                footerbg: '#B9C4DF',
             },
-            },
-        };
-        </script>
-
-        <style>
-
-            body {
-                font-family: 'Roboto', 'sans-serif';
-                font-weight: 300;
-                margin: 0;
-                padding: 0;
+            backgroundImage: {
+                // hero background
+                'hero-svg': "url('./assets/bgs/HeroBg.svg')",
+                // full-page background
+                'page-svg': "url('./assets/bgs/background.svg')",
             }
-            
-        </style>
+        },
+        },
+    };
+    </script>
+    <!-- styles -->
+    <style>
+        body {
+            font-family: 'Roboto', 'sans-serif';
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
 
-    </head>
+<body class="min-h-screen flex flex-col">
 
-        <body class="flex flex-col min-h-screen bg-page-svg bg-no-repeat bg-cover">
-            <!-- Top bar -->
-            <div class="bg-navbg w-full">
-                <div>
-                    <p class="pl-20 pt-4 pb-4 text-sm">Ebglyss® Emotional Wellbeing Programme</p>
-                </div>
+    <!-- Header -->
+    <header class="bg-navbg border-b">
+        <div class="mx-auto px-4 py-3 flex items-center">
+            <div class="text-sm pl-20 pt-4 pb-4 text-sm md:text-lg">Ebglyss<sup>&reg;▼</sup> Emotional Wellbeing Programme</div>
+    </header>
+
+    <!-- Main page -->
+    <main class="flex-1">
+
+        <!-- Hero -->
+        <section id="hero" aria-label="Hero" class="relative overflow-hidden min-h-vh md:min-h-vh flex text-center items-center">
+            <!-- svg background -->
+            <img src="./assets/bgs/HeroBg.svg" alt="Hero section background gradient" aria-hidden="true" class="absolute inset-0 w-full h-auto object-cover">
+
+            <!-- foreground content -->
+            <div class="relative z-10 justify-center text-center pt-4 mx-auto py-12 md:py-20">
+                <p>
+                    The Ebglyss<sup>&reg;</sup><span class="text-xl">▼</span> Emotional Wellbeing Programme is delivered by Bionical Solutions and funded by Almirall Ltd in 
+                    collaboration with Evergreen Life.
+                </p>
+                <p><span class="text-xl">▼</span> This medicine is subject to additional monitoring</p>
+                <p class="pt-4">
+                    If you get any side effects talk to your doctor, pharmacist, or nurse. This includes any possible side effects not listed in the package leaflet. 
+                    You can also report side effects via The Yellow Card Scheme Website:<a href="www.mhra.gov.uk/yellowcard" class="no-underline"> www.mhra.gov.uk/yellowcard</a>
+                    or search for MHRA Yellow Card in the Google Play or Apple App Store. By reporting side effects you can help provide more information on the safety of this medicine.
+                </p>
+                <!-- hero heading -->
+                <h1 class="mt-14 mb-14 text-3xl md:text-7xl">
+                    Welcome to the Ebglyss<sup>&reg;▼</sup><br>Emotional Wellbeing Programme
+                </h1>
+                <!-- supporting text -->
+                <p class="text-xl">
+                    At this stage you have probably tried various treatments for atopic dermatitis but are still hoping for relief from<br>
+                    this troublesome condition. You are to be commended for seeking treatment and, along with your doctor, taking<br> 
+                    an active part in it. We hope that you will soon find relief and the information presented here will be useful to you. 
+                </p>
+                <p class="text-xl mt-10">Stick with it, you and your doctor are doing great work together.</p>
+
+                <!-- logo -->
+                <img src="./assets/bionical-health.png" alt="Bionical Health Logo" class="pt-5 mx-auto w-56 md:w-[437px]">
             </div>
+        </section>
 
-            <!-- HERO -->
-            <section class="relative w-full overflow-hidden">
-                <!-- Hero background -->
-                <img src="./assets/bgs/HeroBg.svg" alt="Hero background gradient" class="w-full h-auto block">
-                <div class="absolute inset-0 justify-center text-center pt-4">
-                    <!-- disclaimer -->
-                    <div id="disclaimer" class="text-lg">
-                        <p>
-                            The Ebglyss®▼ Emotional Wellbeing Programme is delivered by Bionical Solutions and funded by Almirall Ltd in 
-                            collaboration with Evergreen Life.<br>▼ This medicine is subject to additional monitoring
-                        </p>
-                        <p class="pt-4">
-                            If you get any side effects talk to your doctor, pharmacist, or nurse. This includes any possible side effects not listed in the package leaflet.<br> 
-                            You can also report side effects via The Yellow Card Scheme Website:<a href="www.mhra.gov.uk/yellowcard" class="no-underline"> www.mhra.gov.uk/yellowcard</a>
-                            or search for MHRA Yellow Card in the <br>Google Play or Apple App Store. By reporting side effects you can help provide more information on the safety of this medicine.
-                        </p>
-                    </div>
-
-                    <!-- hero heading -->
-                    <h1 class="mt-14 mb-14 text-3xl md:text-7xl">
-                        Welcome to the Ebglyss® ▼ <br>Emotional Wellbeing Programme
-                    </h1>
-
-                    <!-- supporting text -->
-                    <p class="text-xl">
-                        At this stage you have probably tried various treatments for atopic dermatitis but are still hoping for relief from<br>
-                        this troublesome condition. You are to be commended for seeking treatment and, along with your doctor, taking<br> 
-                        an active part in it. We hope that you will soon find relief and the information presented here will be useful to you. 
-                    </p>
-                    <p class="text-xl mt-10">Stick with it, you and your doctor are doing great work together.</p>
-                    <!-- logo -->
-                    <img src="./assets/bionical-health.png" class="w-[220px] md:w-[437px] mx-auto mt-6" alt="Bionical Health logo.">
-                </div>
-            </section>
-            <!-- WELCOME -->
-            <section class="relative w-full overflow-hidden">
-                <div class="justify-center text-center">
-                    <!-- HORIZONTAL CARD -->
-                    <div class="flex bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-2xl mx-auto mb-10">
-                        <!-- Left image -->
-                        <img src="./assets/shutterstock_2029247285_edited.png" 
-                            alt="Hands holding smiley face" 
-                            class="w-60 h-60 object-cover rounded-l-2xl" />
-
-                        <!-- Right content -->
-                        <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">
-                            Welcome to Ebglyss® (lebrikizumab)<br>Emotional Wellbeing Programme
-                            </h2>
-                            <p class="mt-2 text-sm">
-                            Information to help you understand more about this programme and what to expect.
-                            </p>
-                        </div>
-
-                        <!-- Arrow button -->
-                        <div class="mt-auto flex justify-end p-4">
-                            <button class="btn-arrow w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                            </button>
-                        </div>
-                    </div>
-
-                    <h2 class="text-lg font-bold pb-4">Please read through the articles below which can help yuou to live well with atopic dermatitis.</h2>
-                    <p>
-                        The contents of this website are not intended to be medical advice. Please see your healthcare<br>
-                        professional with any specific questions about your condition and / or treatment.
-                    </p>
-
-                    <!-- condition and treatment -->
-                    <h2 class="text-4xl pt-8">Understanding your condition and treatment</h2>
-
-                    <!-- vertical cards -->
-                    <!-- VERTICAL CARD -->
-                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-xs mx-auto mb-10">
-                    <!-- Top image -->
+        <!-- Welcome -->
+        <section id="welcome" aria-labelledby="welcome-title" class="bg-page-svg bg-no-repeat bg-cover py-16">
+            <div class="justify-center text-center">
+                <!-- HORIZONTAL CARD -->
+                <div class="flex bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-2xl mx-auto mb-10">
+                    <!-- Left image -->
                     <img src="./assets/shutterstock_2029247285_edited.png" 
                         alt="Hands holding smiley face" 
-                        class="w-full h-40 object-cover" />
+                        class="w-60 h-60 object-cover rounded-l-2xl" />
 
-                    <!-- Bottom content -->
-                    <div class="flex flex-col flex-1 p-6 text-left relative">
+                    <!-- Right content -->
+                    <div class="flex flex-col flex-1 p-6 text-left">
                         <h2 class="font-semibold text-lg">
-                        What is atopic dermatitis?
+                        Welcome to Ebglyss® (lebrikizumab)<br>Emotional Wellbeing Programme
                         </h2>
-                        <p class="mt-2 text-sm text-gray-700">
-                        This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                        <p class="mt-2 text-sm">
+                        Information to help you understand more about this programme and what to expect.
                         </p>
-
-                        <!-- Arrow button in bottom right -->
-                        <div class="absolute bottom-4 right-4">
-                        <button class="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow hover:bg-gray-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" 
-                                fill="none" viewBox="0 0 24 24" stroke="currentColor" 
-                                class="w-5 h-5 text-gray-800">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                        </div>
                     </div>
+
+                    <!-- Arrow button -->
+                    <div class="mt-auto flex justify-end p-4">
+                        <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                        </button>
                     </div>
                 </div>
 
-            </section>
-            <!-- INFO (Supporting your day to day) -->
-            <section class="bg-infobg bg-no-repeat bg-cover">
+                <h2 class="text-lg font-bold pb-4">Please read through the articles below which can help yuou to live well with atopic dermatitis.</h2>
+                <p>
+                    The contents of this website are not intended to be medical advice. Please see your healthcare<br>
+                    professional with any specific questions about your condition and / or treatment.
+                </p>
 
-            </section>
-            <!-- FOOTER -->
-            <footer class="bg-footerbg">
-            </footer>
-        </body>
+                <!-- condition and treatment -->
+                <h2 class="text-4xl pt-8">Understanding your condition and treatment</h2>
+
+                <!-- vertical cards -->
+                <!-- Card container -->
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- CARD 1 -->
+                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/AdobeStock_137327339_Preview_v2.jpg" 
+                            alt="Hands holding smiley face" 
+                            class="w-full h-40 object-cover" />
+
+                        <div class="flex flex-col flex-1 p-6 text-left">
+                        <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
+                        <p class="mt-2 text-sm text-gray-700">
+                            This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                        </p>
+                        <div class="mt-auto flex justify-end">
+                            <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/AdobeStock_181902053_Preview.jpeg" 
+                            alt="Hands holding smiley face" 
+                            class="w-full h-40 object-cover" />
+
+                        <div class="flex flex-col flex-1 p-6 text-left">
+                        <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
+                        <p class="mt-2 text-sm text-gray-700">
+                            This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                        </p>
+                        <div class="mt-auto flex justify-end">
+                            <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CARD 3 -->
+                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/shutterstock_2036186195.jpg" 
+                            alt="Hands holding smiley face" 
+                            class="w-full h-40 object-cover" />
+
+                        <div class="flex flex-col flex-1 p-6 text-left">
+                        <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss&reg;</h2>
+                        <p class="mt-2 text-sm text-gray-700">
+                            This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                        </p>
+                        <div class="mt-auto flex justify-end">
+                            <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HORIZONTAL CARD -->
+                <div class="flex bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-2xl mx-auto mb-10">
+                    <!-- Left image -->
+                    <img src="./assets/shutterstock_1062165887.jpg" 
+                        alt="Hands holding smiley face" 
+                        class="w-60 h-60 object-cover rounded-l-2xl" />
+
+                    <!-- Right content -->
+                    <div class="flex flex-col flex-1 p-6 text-left">
+                        <h2 class="font-semibold text-lg">Why your emotional wellbeing is important</h2>
+                        <p class="mt-2 text-sm">
+                            Stress is associated with inflammation that can trigger 
+                            psoriasis. This article explains more about stress and the 
+                            importance of emotional wellbeing.
+                        </p>
+                    </div>
+
+                    <!-- Arrow button -->
+                    <div class="mt-auto flex justify-end p-4">
+                        <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info -->
+        <section id="info" aria-labelledby="info-title" class="py-16 bg-infobg">
+            <div class="justify-center text-center">
+                <!-- info heading -->
+                <h1>Supporting you day to day</h1>
+
+                <!-- Card container -->
+                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- CARD 1 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/shutterstock_1349607431.jpg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/shutterstock_2055019133.jpg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CARD 3 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/shutterstock_708734755.jpg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss&reg;</h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card container -->
+                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- CARD 1 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/shutterstock_1740635273.jpg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/shutterstock_418093825.jpg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CARD 3 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/shutterstock_1931685242.jpg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss&reg;</h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card container -->
+                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- CARD 1 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/AdobeStock_999546722_Preview.jpeg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/AdobeStock_970616575_Preview.jpeg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CARD 3 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/AdobeStock_875203139_Preview.jpeg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss<sup>&reg;</sup></h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card container -->
+                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- CARD 1 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/AdobeStock_585890271_Preview.jpeg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                            <img src="./assets/shutterstock_2106890930.jpg" 
+                                alt="Hands holding smiley face" 
+                                class="w-full h-40 object-cover" />
+
+                            <div class="flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
+                            <p class="mt-2 text-sm text-gray-700">
+                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                            </p>
+                            <div class="mt-auto flex justify-end">
+                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
+                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-footerbg border-t">
+            <div class="mx-auto w-full px-12 py-6 text-sm">
+                <!-- First row: service helplines -->
+                <div class="mb-6">
+                <p class="font-semibold">Service Helplines</p>
+                <p>
+                    For general support relating to the Ilumetri<sup>&reg;</sup> Emotional Wellbeing Programme please phone the
+                    dedicated Bionical helpline on: <b>01283 249691</b><br>
+                    If you require technical help with the website, you can email <b>welcome@gracecomms.co.uk</b>
+                </p>
+                </div>
+
+                <hr class="border-t border-black mb-6">
+
+                <!-- 3-column section -->
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <!-- Left column -->
+                <p class="text-center md:text-left">
+                    Ebglyss<sup>&reg;</sup> EMOTIONAL WELLBEING PROGRAMME<br>
+                    UK&amp;IE-LEBRI-24000XX December 2024
+                </p>
+
+                <!-- Middle column -->
+                <div class="flex gap-6 text-center">
+                    <a href="" class="font-semibold hover:underline">Privacy Policy</a>
+                    <a href="" class="font-semibold hover:underline">Cookies Policy</a>
+                </div>
+
+                <!-- Right column -->
+                <img src="./assets/bionical-health.png"
+                    alt="Bionical Health"
+                    class="h-6 md:h-8">
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+</body>
 </html>
