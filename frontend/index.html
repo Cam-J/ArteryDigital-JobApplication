@@ -1,8 +1,20 @@
+<!--
+    Artery Digital - Junior Frontend Developer Task
+    Author: Cameron Jones | Date: 10 Sep 2025
+    Stack: HTML + Tailwind CSS (CDN), Roboto (Google Fonts)
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Ebglyss® Emotional Wellbeing Programme">
+    <meta name="description" content="Responsive landing page for the Ebglyss® Emotional Wellbeing Programme.">
+    <meta name="language" content="English">
+    <meta name="author" content="Cameron Jones">
+    <!-- ================================================================================================================ -->
+
     <title>Ebglyss&reg; EMOTIONAL WELLBEING PROGRAMME</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,6 +44,10 @@
     };
     </script>
     <style>
+        html {
+            scrollbar-gutter: stable;
+        }
+
         body {
             font-family: 'Roboto', 'sans-serif';
             font-weight: 300;
@@ -53,7 +69,8 @@
     <!-- Main page -->
     <main class="flex-1">
 
-        <!-- Hero -->
+        <!-- Hero: layered bg SVG and large min-height to match hero composition.
+        object-cover + -z-10 keeps the artwork behind foreground content. -->
         <section id="hero" aria-label="Hero" class="relative overflow-visible min-h-[70vh] md:min-h-screen flex text-center pt-8 md:pt-12">
             <!-- svg background -->
             <img src="./assets/bgs/HeroBg.svg" alt="Hero section background gradient" aria-hidden="true" class="absolute inset-0 w-full h-[110%] -z-10 object-cover pointer-events-none">
@@ -95,7 +112,7 @@
             </div>
         </section>
 
-        <!-- Welcome -->
+        <!-- Welcome: lifted over the hero curve on md+ to mirror the PDF (no overlap on mobile) -->
         <section id="welcome" aria-labelledby="welcome-title" class="relative z-20 md:-mt-40 pb-[78px]">
             <div class="max-w-6xl mx-auto text-center px-4">
 
@@ -113,7 +130,9 @@
                         <p class="text-sm md:text-lg mt-2 flex-1">
                         Information to help you understand more about this programme and what to expect.
                         </p>
+                        <!-- Reserve space so text never collides with the arrow -->
                         <div class="pb-10"></div>
+                        <!-- Arrow pinned bottom-right -->
                         <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
                             <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
                         </button>
@@ -132,7 +151,7 @@
                 <!-- Condition and treatment heading -->
                 <h2 class="text-4xl pt-8">Understanding your condition and treatment</h2>
 
-                <!-- Vertical cards w/ responsive grid -->
+                <!-- Vertical cards: equal-height via flex column; arrow pinned bottom-right; responsive type -->
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 pt-20">
 
                     <!-- CARD 1 -->
@@ -143,7 +162,9 @@
                         <p class="flex-1 text-sm md:text-lg">
                             This article explains the different types of atopic dermatitis, causes, triggers, and more.
                         </p>
+                        <!-- Reserve space so text never collides with the arrow -->
                         <div class="pb-8"></div>
+                        <!-- Arrow pinned bottom-right -->
                         <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
                             <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
                         </button>
@@ -376,7 +397,7 @@
                     </article>
                 </div>
             </div>
-            <!-- Sticky "Return to top" inside Info section -->
+            <!-- Sticky "Return to top" (no JS): sticks near bottom-right while within the Info section -->
             <div class="relative mt-8">
                 <div class="sticky flex justify-end pr-6">
                     <div class="text-center">
