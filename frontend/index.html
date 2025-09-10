@@ -19,18 +19,18 @@
                 cardbg: '#F3EBE6',
                 infobg: '#E1E6F5',
                 footerbg: '#B9C4DF',
+                btnhover: '#EED6D4',
             },
             backgroundImage: {
-                // hero background
-                'hero-svg': "url('./assets/bgs/HeroBg.svg')",
                 // full-page background
                 'page-svg': "url('./assets/bgs/background.svg')",
+                // Info gradient
+                'bGgradient': 'linear-gradient(170deg, #ADC8E7, #F9ECEA, #BFB9D7)',
             }
         },
         },
     };
     </script>
-    <!-- styles -->
     <style>
         body {
             font-family: 'Roboto', 'sans-serif';
@@ -41,404 +41,356 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col">
+<body id="top" class="min-h-screen w-full bg-bGgradient bg-opacity-60 flex flex-col">
 
     <!-- Header -->
-    <header class="bg-navbg border-b">
-        <div class="mx-auto px-4 py-3 flex items-center">
+    <header class="bg-navbg">
+        <div class="mx-auto md:px-4 md:py-3 flex items-center">
             <div class="text-sm pl-20 pt-4 pb-4 text-sm md:text-lg">Ebglyss<sup>&reg;▼</sup> Emotional Wellbeing Programme</div>
+        </div>
     </header>
 
     <!-- Main page -->
     <main class="flex-1">
 
         <!-- Hero -->
-        <section id="hero" aria-label="Hero" class="relative overflow-hidden min-h-vh md:min-h-vh flex text-center items-center">
+        <section id="hero" aria-label="Hero" class="relative overflow-visible min-h-[70vh] md:min-h-screen flex text-center pt-8 md:pt-12">
             <!-- svg background -->
-            <img src="./assets/bgs/HeroBg.svg" alt="Hero section background gradient" aria-hidden="true" class="absolute inset-0 w-full h-auto object-cover">
+            <img src="./assets/bgs/HeroBg.svg" alt="Hero section background gradient" aria-hidden="true" class="absolute inset-0 w-full h-[110%] -z-10 object-cover pointer-events-none">
 
             <!-- foreground content -->
-            <div class="relative z-10 justify-center text-center pt-4 mx-auto py-12 md:py-20">
-                <p>
-                    The Ebglyss<sup>&reg;</sup><span class="text-xl">▼</span> Emotional Wellbeing Programme is delivered by Bionical Solutions and funded by Almirall Ltd in 
-                    collaboration with Evergreen Life.
-                </p>
-                <p><span class="text-xl">▼</span> This medicine is subject to additional monitoring</p>
-                <p class="pt-4">
-                    If you get any side effects talk to your doctor, pharmacist, or nurse. This includes any possible side effects not listed in the package leaflet. 
-                    You can also report side effects via The Yellow Card Scheme Website:<a href="www.mhra.gov.uk/yellowcard" class="no-underline"> www.mhra.gov.uk/yellowcard</a>
-                    or search for MHRA Yellow Card in the Google Play or Apple App Store. By reporting side effects you can help provide more information on the safety of this medicine.
-                </p>
+            <div class="relative z-10 justify-center text-center px-12 md:px-20 py-6 max-w-full mx-auto">
+                <div class="text-sm md:text-lg">
+                    <p >
+                        The Ebglyss<sup>&reg;</sup><span class="text-xl">▼</span> Emotional Wellbeing Programme is delivered by Bionical Solutions and funded by Almirall Ltd in 
+                        collaboration with Evergreen Life.
+                    </p>
+                    <p><span class="text-xl">▼</span> This medicine is subject to additional monitoring</p>
+                    <p class="pt-5">
+                        If you get any side effects talk to your doctor, pharmacist, or nurse. This includes any possible side effects not listed in the package leaflet.
+                    </p>
+                    <p>
+                        You can also report side effects via The Yellow Card Scheme Website:
+                        <a href="https://www.mhra.gov.uk/yellowcard" target="_blank" rel="noopener" class="no-underline break-words">www.mhra.gov.uk/yellowcard</a> or search for MHRA Yellow Card in the 
+                    </p>
+                    <p>
+                        Google Play or Apple App Store. By reporting side effects you can help provide more information on the safety of this medicine.
+                    </p>
+                </div>
+
                 <!-- hero heading -->
-                <h1 class="mt-14 mb-14 text-3xl md:text-7xl">
+                <h1 class="pt-20 pb-10 text-3xl md:text-7xl">
                     Welcome to the Ebglyss<sup>&reg;▼</sup><br>Emotional Wellbeing Programme
                 </h1>
                 <!-- supporting text -->
-                <p class="text-xl">
+                <p class="text-sm md:text-2xl">
                     At this stage you have probably tried various treatments for atopic dermatitis but are still hoping for relief from<br>
                     this troublesome condition. You are to be commended for seeking treatment and, along with your doctor, taking<br> 
                     an active part in it. We hope that you will soon find relief and the information presented here will be useful to you. 
                 </p>
-                <p class="text-xl mt-10">Stick with it, you and your doctor are doing great work together.</p>
+                <p class="text-2xl mt-10">Stick with it, you and your doctor are doing great work together.</p>
 
                 <!-- logo -->
-                <img src="./assets/bionical-health.png" alt="Bionical Health Logo" class="pt-5 mx-auto w-56 md:w-[437px]">
+                <img src="./assets/bionical-health.png" alt="Bionical Health Logo" class="pt-10 mx-auto w-80 md:w-[600px]">
             </div>
         </section>
 
         <!-- Welcome -->
-        <section id="welcome" aria-labelledby="welcome-title" class="bg-page-svg bg-no-repeat bg-cover py-16">
-            <div class="justify-center text-center">
-                <!-- HORIZONTAL CARD -->
-                <div class="flex bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-2xl mx-auto mb-10">
-                    <!-- Left image -->
-                    <img src="./assets/shutterstock_2029247285_edited.png" 
-                        alt="Hands holding smiley face" 
-                        class="w-60 h-60 object-cover rounded-l-2xl" />
+        <section id="welcome" aria-labelledby="welcome-title" class="relative z-20 md:-mt-40 pb-[78px]">
+            <div class="max-w-6xl mx-auto text-center px-4">
 
+                <!-- HORIZONTAL CARD -->
+                <div class="bg-cardbg rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row w-full max-w-[890px] md:h-[220px] mx-auto mb-10">
+                    <!-- Left image -->
+                    <div class="relative h-44 md:h-full md:w-[260px] shrink-0">
+                        <img src="./assets/welcome.png" alt="Hands holding smiley face" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
                     <!-- Right content -->
-                    <div class="flex flex-col flex-1 p-6 text-left">
-                        <h2 class="font-semibold text-lg">
+                    <div class="relative p-6 flex-1 flex flex-col text-left">
+                        <h2 class="text-lg md:text-xl font-semibold">
                         Welcome to Ebglyss® (lebrikizumab)<br>Emotional Wellbeing Programme
                         </h2>
-                        <p class="mt-2 text-sm">
+                        <p class="text-sm md:text-lg mt-2 flex-1">
                         Information to help you understand more about this programme and what to expect.
                         </p>
-                    </div>
-
-                    <!-- Arrow button -->
-                    <div class="mt-auto flex justify-end p-4">
-                        <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                        <div class="pb-10"></div>
+                        <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                            <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
                         </button>
                     </div>
                 </div>
 
-                <h2 class="text-lg font-bold pb-4">Please read through the articles below which can help yuou to live well with atopic dermatitis.</h2>
-                <p>
-                    The contents of this website are not intended to be medical advice. Please see your healthcare<br>
-                    professional with any specific questions about your condition and / or treatment.
+                <!-- Supporting text -->
+                <h2 id="welcome-title" class="text-xl font-bold pt-10 pb-4">
+                Please read through the articles below which can help you to live well with atopic dermatitis.
+                </h2>
+                <p class="text-lg">
+                The contents of this website are not intended to be medical advice. Please see your healthcare<br>
+                professional with any specific questions about your condition and / or treatment.
                 </p>
 
-                <!-- condition and treatment -->
+                <!-- Condition and treatment heading -->
                 <h2 class="text-4xl pt-8">Understanding your condition and treatment</h2>
 
-                <!-- vertical cards -->
-                <!-- Card container -->
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <!-- CARD 1 -->
-                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                        <img src="./assets/AdobeStock_137327339_Preview_v2.jpg" 
-                            alt="Hands holding smiley face" 
-                            class="w-full h-40 object-cover" />
+                <!-- Vertical cards w/ responsive grid -->
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 pt-20">
 
-                        <div class="flex flex-col flex-1 p-6 text-left">
-                        <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
-                        <p class="mt-2 text-sm text-gray-700">
+                    <!-- CARD 1 -->
+                    <article class="bg-cardbg rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                        <img src="./assets/what-is.jpg" alt="What is atopic dermatitis?" class="w-full h-48 object-cover" />
+                        <div class="relative p-6 flex-1 flex flex-col text-left">
+                        <h2 class="text-sm md:text-xl font-semibold mb-2">What is atopic dermatitis?</h2>
+                        <p class="flex-1 text-sm md:text-lg">
                             This article explains the different types of atopic dermatitis, causes, triggers, and more.
                         </p>
-                        <div class="mt-auto flex justify-end">
-                            <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                            </button>
+                        <div class="pb-8"></div>
+                        <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                            <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                        </button>
                         </div>
-                        </div>
-                    </div>
+                    </article>
 
                     <!-- CARD 2 -->
-                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                        <img src="./assets/AdobeStock_181902053_Preview.jpeg" 
-                            alt="Hands holding smiley face" 
-                            class="w-full h-40 object-cover" />
-
-                        <div class="flex flex-col flex-1 p-6 text-left">
-                        <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
-                        <p class="mt-2 text-sm text-gray-700">
-                            This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <article class="bg-cardbg rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                        <img src="./assets/taking-care.jpeg" alt="Taking care of your skin with atopic dermatitis" class="w-full h-48 object-cover" />
+                        <div class="relative p-6 flex-1 flex flex-col text-left">
+                        <h2 class="text-sm md:text-xl font-semibold mb-2">Taking care of your skin with atopic dermatitis</h2>
+                        <p class="flex-1 text-sm md:text-lg">
+                            In this article, we offer some tips that may help you take general care of your skin.
                         </p>
-                        <div class="mt-auto flex justify-end">
-                            <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                            </button>
+                        <div class="pb-8"></div>
+                        <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                            <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                        </button>
                         </div>
-                        </div>
-                    </div>
-                    
+                    </article>
+
                     <!-- CARD 3 -->
-                    <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                        <img src="./assets/shutterstock_2036186195.jpg" 
-                            alt="Hands holding smiley face" 
-                            class="w-full h-40 object-cover" />
-
-                        <div class="flex flex-col flex-1 p-6 text-left">
-                        <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss&reg;</h2>
-                        <p class="mt-2 text-sm text-gray-700">
-                            This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <article class="bg-cardbg rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                        <img src="./assets/understanding.jpg" alt="Understanding your treatment with Ebglyss" class="w-full h-48 object-cover" />
+                        <div class="relative p-6 flex-1 flex flex-col text-left">
+                        <h2 class="text-sm md:text-xl font-semibold mb-2">Understanding your treatment with Ebglyss&reg;</h2>
+                        <p class="flex-1 text-sm md:text-lg">
+                            Information to help you with your treatment with Ebglyss&reg;, including a video on how to inject.
                         </p>
-                        <div class="mt-auto flex justify-end">
-                            <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                            </button>
+                        <div class="pb-8"></div>
+                        <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                            <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                        </button>
                         </div>
-                        </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- HORIZONTAL CARD -->
-                <div class="flex bg-cardbg rounded-2xl shadow-lg overflow-hidden max-w-2xl mx-auto mb-10">
+                <div class="bg-cardbg rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row w-full max-w-[890px] md:h-[220px] mx-auto mt-10">
                     <!-- Left image -->
-                    <img src="./assets/shutterstock_1062165887.jpg" 
-                        alt="Hands holding smiley face" 
-                        class="w-60 h-60 object-cover rounded-l-2xl" />
-
-                    <!-- Right content -->
-                    <div class="flex flex-col flex-1 p-6 text-left">
-                        <h2 class="font-semibold text-lg">Why your emotional wellbeing is important</h2>
-                        <p class="mt-2 text-sm">
-                            Stress is associated with inflammation that can trigger 
-                            psoriasis. This article explains more about stress and the 
-                            importance of emotional wellbeing.
-                        </p>
+                    <div class="relative h-44 md:h-full md:w-[260px] shrink-0">
+                        <img src="./assets/emotional.jpg" alt="Emotional wellbeing" class="absolute inset-0 w-full h-full object-cover" />
                     </div>
-
-                    <!-- Arrow button -->
-                    <div class="mt-auto flex justify-end p-4">
-                        <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                            <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
+                    <!-- Right content -->
+                    <div class="relative p-6 flex-1 flex flex-col text-left">
+                        <h2 class="text-sm md:text-xl font-semibold">Why your emotional wellbeing is important</h2>
+                        <p class="mt-2 text-sm md:text-lg flex-1">
+                        Stress is associated with inflammation that can trigger psoriasis.
+                        This article explains more about stress and the importance of emotional wellbeing.
+                        </p>
+                        <div class="pb-10"></div>
+                        <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                            <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
                         </button>
                     </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Info -->
-        <section id="info" aria-labelledby="info-title" class="py-16 bg-infobg">
-            <div class="justify-center text-center">
+        <section id="info" aria-labelledby="info-title" class="py-16 bg-infobg bg-opacity-25">
+            <div class="max-w-7xl mx-auto px-4">
                 <!-- Info heading -->
-                <h1>Supporting you day to day</h1>
+                <h1 id="info-title" class="text-center  text-3xl md:text-4xl mb-10">Supporting you day to day</h1>
 
-                <!-- Card container -->
-                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        <!-- CARD 1 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/shutterstock_1349607431.jpg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
-
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                <!-- responsive grid -->
+                <div class="grid gap-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- CARD 1 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/working.jpg" alt="Working at a desk" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Working with atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">
+                                People with psoriasis sometimes find that their condition has an effect on other parts of their lives – notably, their work.
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
+                    </article>
 
-                        <!-- CARD 2 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/shutterstock_2055019133.jpg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
-
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 2 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/keeping-active.jpg" alt="Keeping active outdoors" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Keeping active</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">
+                                Exercise has been found to improve psoriasis in some people who are overweight.
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
-                        
-                        <!-- CARD 3 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/shutterstock_708734755.jpg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
+                    </article>
 
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss&reg;</h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 3 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/sleep.jpg" alt="Sleeping comfortably" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Sleep and atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">
+                                Sleep is crucial for the maintenance of good health. This article offers some tips to help you get a better night’s sleep.
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Card container -->
-                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        <!-- CARD 1 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/shutterstock_1740635273.jpg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
-
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 4 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/nutrition.jpg" alt="Working at a desk" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Nutrition and atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">
+                                Eating well is one of the best things we can do to keep ourselves healthy. But what does a healthy diet look like?
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
+                    </article>
 
-                        <!-- CARD 2 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/shutterstock_418093825.jpg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
-
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 5 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/alcohol.jpg" alt="Keeping active outdoors" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Alcohol and atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">
+                                Alcohol affects psoriasis flares by increasing inflammation in the body. Read our article on the guidelines and how to manage your alcohol intake.
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
-                        
-                        <!-- CARD 3 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/shutterstock_1931685242.jpg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
+                    </article>
 
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss&reg;</h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 6 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/smokeless.jpg" alt="Sleeping comfortably" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Going smokeless</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">
+                                Smoking can aggravate symptoms associated with psoriasis. Find out more on the benefits of quitting and find links to support you.
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Card container -->
-                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        <!-- CARD 1 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/AdobeStock_999546722_Preview.jpeg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
-
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 7 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/allergies.jpeg" alt="Working at a desk" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Allergies and atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg text-gray-700 flex-1">
+                                Text to be confirmed
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
+                    </article>
 
-                        <!-- CARD 2 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/AdobeStock_970616575_Preview.jpeg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
-
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 8 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/travel.jpeg" alt="Keeping active outdoors" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Travel and atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg text-gray-700 flex-1">
+                                Text to be confirmed
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
-                        
-                        <!-- CARD 3 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/AdobeStock_875203139_Preview.jpeg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
+                    </article>
 
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">Understanding your treatment with Ebglyss<sup>&reg;</sup></h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 9 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/school.jpeg" alt="Sleeping comfortably" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">School and atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg text-gray-700 flex-1">
+                                Text to be confirmed
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Card container -->
-                    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        <!-- CARD 1 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/AdobeStock_585890271_Preview.jpeg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
+                    <!-- CARD 10 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/advice.jpeg" alt="Working at a desk" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Advice for parents</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">Text to be confirmed</p>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
+                        </div>
+                    </article>
 
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">What is atopic dermatitis?</h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
+                    <!-- CARD 11 -->
+                    <article class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
+                        <img src="./assets/peer-to-peer.jpg" alt="Keeping active outdoors" class="w-full h-45 object-cover" />
+                        <div class="relative flex flex-col flex-1 p-6 text-left">
+                            <h2 class="font-semibold text-sm md:text-xl">Peer to peer support for atopic dermatitis</h2>
+                            <p class="mt-2 text-sm md:text-lg flex-1">
+                                Sharing experiences with other people affected by psoriasis is seen as very valuable by many people. Here are some links to online forums.
                             </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
+                            <div class="pb-8"></div>
+                            <button class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-white shadow hover:bg-btnhover">
+                                <img src="./assets/next.png" alt="arrow" class="w-6 h-6 mx-auto">
+                            </button>
                         </div>
-
-                        <!-- CARD 2 -->
-                        <div class="flex flex-col bg-cardbg rounded-2xl shadow-lg overflow-hidden h-full">
-                            <img src="./assets/shutterstock_2106890930.jpg" 
-                                alt="Hands holding smiley face" 
-                                class="w-full h-40 object-cover" />
-
-                            <div class="flex flex-col flex-1 p-6 text-left">
-                            <h2 class="font-semibold text-lg">Taking care of your skin with atopic dermatitis </h2>
-                            <p class="mt-2 text-sm text-gray-700">
-                                This article explains the different types of atopic dermatitis, causes, triggers, and more.
-                            </p>
-                            <div class="mt-auto flex justify-end">
-                                <button class="w-8 h-8 rounded-full bg-white shadow hover:bg-gray-100">
-                                <img src="./assets/next.png" alt="arrow pointing right" class="w-6 h-6 flex mx-auto">
-                                </button>
-                            </div>
-                            </div>
-                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Sticky "Return to top" inside Info section -->
+            <div class="relative mt-8">
+                <div class="sticky flex justify-end pr-6">
+                    <div class="text-center">
+                        <a href="#top" aria-label="Return to top"
+                            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-gray-300 hover:bg-gray-100">
+                            <!-- Up arrow (you can use your next.png rotated if you prefer) -->
+                            <img src="./assets/top.png" alt="arrow pointing up" class="px-3">
+                        </a>
+                        <div class="mt-2 text-sm text-gray-700">Return to the top</div>
                     </div>
                 </div>
+            </div>
         </section>
+
 
         <!-- Footer -->
         <footer class="bg-footerbg border-t">
